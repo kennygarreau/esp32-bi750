@@ -12,4 +12,4 @@ This is on a LilyGO T-Display S3, the perfect candidate for this at under $10:
 <br>
 <img src="./images/bi750_charging.jpg">
 <br>
-<img src="./images/bi750_discharging.jpg>
+<img src="./images/bi750_discharging.jpg">
