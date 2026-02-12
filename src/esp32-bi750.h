@@ -3,12 +3,16 @@
 
 #include <Arduino.h>
 
+#define TIME_TO_SLEEP  3600            // Sleep duration in seconds (1 hour)
+#define uS_TO_S_FACTOR 1000000ULL      // Conversion factor
+#define SCAN_DURATION 5000
+
 // Base header shared by all ITSC packets
-struct ITSCHeader {
-    char header[4];      // "ITSC"
-    uint16_t deviceId;   // 0x0608 or 0x060B
-    uint8_t wordIndex;   // The Multiplexer (0x33, 0x34, 0x35, 0x36)
-} __attribute__((packed));
+typedef struct __attribute__((packed)) {
+    char header[4];
+    uint16_t deviceId;
+    uint8_t wordIndex;
+} ITSCHeader;
 
 // Word 0x32: Firmware & Date (YY MM DD)
 struct Packet32 {
@@ -72,5 +76,19 @@ struct Packet36 {
     uint8_t reserved[5];
     uint8_t checksum;
 } __attribute__((packed));
+
+// C interface for LVGL
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+//void set_battery_data(uint8_t percentage, uint8_t temperature, uint8_t chargeMode);
+// const char* get_var_temperature();
+// const char* get_var_battery_percent();
+// const char* get_var_charge_mode();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

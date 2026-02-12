@@ -5,3 +5,11 @@ I wanted to check the health of my BlackboxMyCar BI-750 battery, and to my disma
 ---
 
 This will be integrated into other projects of mine, but if you find some use out of it, that's great. I'll write as much helper code as I can, but reading through the header files and the pollBattery function should give you a pretty good idea of how the poll/notify mechanism works.
+
+## Example Images ##
+
+This is on a LilyGO T-Display S3, the perfect candidate for this at under $10:
+<br>
+<img src="./images/bi750_charging.jpg">
+<br>
+<img src="./images/bi750_discharging.jpg>
