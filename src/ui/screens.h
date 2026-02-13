@@ -20,7 +20,7 @@ typedef struct _objects_t {
     lv_obj_t *label_charge_time;
     lv_obj_t *label_firmware;
     lv_obj_t *label_device_name;
-    lv_obj_t *label_mah;
+    lv_obj_t *label_capacity;
     lv_obj_t *temperature_container;
     lv_obj_t *label_temperature;
 } objects_t;

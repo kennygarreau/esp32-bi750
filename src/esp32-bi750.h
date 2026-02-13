@@ -77,18 +77,4 @@ struct Packet36 {
     uint8_t checksum;
 } __attribute__((packed));
 
-// C interface for LVGL
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-//void set_battery_data(uint8_t percentage, uint8_t temperature, uint8_t chargeMode);
-// const char* get_var_temperature();
-// const char* get_var_battery_percent();
-// const char* get_var_charge_mode();
-
-#ifdef __cplusplus
-}
-#endif
-
 #endif

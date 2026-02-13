@@ -26,9 +26,6 @@ typedef struct {
 extern BatteryData batteryData;
 //#define DEBUG
 
-void set_0x33_data(uint8_t percentage, uint8_t temperature, uint8_t chargeMode);
-void set_0x34_data(float inV, float outV, float outA);
-
 #ifdef __cplusplus
 }
 #endif

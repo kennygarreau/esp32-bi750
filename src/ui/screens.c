@@ -7,7 +7,6 @@
 #include "vars.h"
 #include "styles.h"
 #include "ui.h"
-//#include "../esp32-bi750.h"
 #include "../battery-interface.h"
 
 #include <string.h>
@@ -149,9 +148,9 @@ void create_screen_main() {
                     lv_obj_set_style_text_font(obj, &ui_font_roboto_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                 }
                 {
-                    // label_mah
+                    // label_capacity
                     lv_obj_t *obj = lv_label_create(parent_obj);
-                    objects.label_mah = obj;
+                    objects.label_capacity = obj;
                     lv_obj_set_pos(obj, 72, 154);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_text(obj, "N/A");
@@ -193,6 +192,7 @@ void create_screen_main() {
 void tick_screen_main() {
     lv_label_set_text(objects.label_device_name, batteryData.deviceName);
     lv_label_set_text_fmt(objects.label_firmware, "v%s", batteryData.fwVer);
+    lv_label_set_text_fmt(objects.label_capacity, "%d mAh", batteryData.capacity);
     lv_label_set_text(objects.label_status, (batteryData.chargeMode == 1) ? "Charging" : "Discharging");
     if (batteryData.chargeMode == 1) {
         // if charging, set the input current values

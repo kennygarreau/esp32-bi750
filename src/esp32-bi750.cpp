@@ -21,7 +21,6 @@ uint8_t currentWord = 0x32; // Start by asking for version info
 int chargeMode = -1; // -1: Unknown, 1: Charging/Driving, 0: Discharging/Parking
 uint8_t batteryPercent = 0;
 
-//BatteryData batteryData = {0, 0, 0, 0, 0, 0, 0, false};
 BatteryData batteryData;
 
 RTC_DATA_ATTR uint8_t hoursParked = 0;
