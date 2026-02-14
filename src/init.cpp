@@ -1,8 +1,3 @@
-
-/* The product now has two screens, and the initialization code needs a small change in the new version. The LCD_MODULE_CMD_1 is used to define the
- * switch macro. */
-#define LCD_MODULE_CMD_1
-
 #include "OneButton.h" /* https://github.com/mathertel/OneButton.git */
 #include "lvgl.h"      /* https://github.com/lvgl/lvgl.git */
 
@@ -60,8 +55,6 @@ void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color
     tft.pushColors((uint16_t *)&color_p->full, w * h, true);
     tft.endWrite();
 
-    //tft.pushImage(area->x1, area->y1, w, h, (uint16_t *)color_p);
-
     lv_disp_flush_ready(disp);
 }
 
@@ -76,7 +69,6 @@ void init()
     tft.fillScreen(TFT_BLACK);
 
     lv_init();
-    //lv_disp_t buf1 = (lv_color_t *)heap_caps_malloc(LVGL_LCD_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA | MALLOC_CAP_INTERNAL);
     lv_disp_draw_buf_init(&draw_buf, buf1, buf2, LCD_H_RES * 40);
 
     static lv_disp_drv_t disp_drv;

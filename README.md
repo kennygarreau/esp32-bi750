@@ -10,6 +10,8 @@ This will be integrated into other projects of mine, but if you find some use ou
 
 This is on a LilyGO T-Display S3, the perfect candidate for this at under $10:
 <br>
+<img src="./images/bi750_esp32.jpg">
+<br>
 <img src="./images/bi750_charging.jpg">
 <br>
 <img src="./images/bi750_discharging.jpg">
